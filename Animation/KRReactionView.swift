@@ -32,8 +32,8 @@ class KRReactionView: UIView {
             image.frame = CGRect(x: -size, y: yPosition, width: size, height: size)
             
             self.addSubview(image)
-            let options : UIViewAnimationOptions = [.curveEaseInOut,.repeat]
-            let delay = TimeInterval(200 + arc4random_uniform(UInt32( arrNames.count * 100))) / 1000
+            let options : UIViewAnimationOptions = [.repeat]
+            let delay = TimeInterval(200 + arc4random_uniform(UInt32( arrNames.count * 150))) / 1000
             UIView.animate(withDuration: 1.5, delay: delay, options: options, animations: {
                 image.frame = CGRect(x: self.frame.width, y: yPosition, width: size, height: size)
             }) { (completed) in
